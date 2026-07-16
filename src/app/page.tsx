@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import ResumeViewer from "./resume-viewer";
 import "./home.css";
@@ -8,21 +9,21 @@ const modelPages = [
     href: "/gpt",
     model: "GPT-5.6-sol xhigh",
     tool: "Codex CLI",
-    logo: "gpt",
+    logo: "/gpt-cropped.png",
   },
   {
     name: "Claude",
     href: "/claude",
     model: "Claude Fable 5 Max",
     tool: "Claude Code",
-    logo: "claude",
+    logo: "/claude.png",
   },
   {
     name: "GLM",
     href: "/glm",
     model: "GLM-5.2",
     tool: "OpenCode",
-    logo: "glm",
+    logo: "/zai.png",
   },
 ];
 
@@ -51,35 +52,6 @@ const capabilities = [
   },
 ];
 
-function ModelLogo({ type }: { type: string }) {
-  if (type === "gpt") {
-    return (
-      <svg className="home-model-logo home-model-logo-gpt" viewBox="0 0 64 64" aria-hidden="true">
-        <path d="M32 8c5.3 0 9.9 3.1 12 7.6 4.9.2 9.5 3.1 12.1 7.7 2.6 4.6 2.3 10.1-.3 14.2 2.2 4.4 2 9.9-.7 14.4-2.7 4.5-7.6 7-12.5 6.8A13.8 13.8 0 0 1 32 64c-5.3 0-9.9-3.1-12-7.6-4.9-.2-9.5-3.1-12.1-7.7-2.6-4.6-2.3-10.1.3-14.2-2.2-4.4-2-9.9.7-14.4 2.7-4.5 7.6-7 12.5-6.8A13.8 13.8 0 0 1 32 8Z" />
-        <path d="M22.4 22.2 32 16.6l9.6 5.6v11.2L32 39l-9.6-5.6V22.2Z" />
-        <path d="M32 16.6v22.5M22.4 22.2 42 33.5M41.6 22.2 22 33.5" />
-      </svg>
-    );
-  }
-
-  if (type === "claude") {
-    return (
-      <svg className="home-model-logo home-model-logo-claude" viewBox="0 0 64 64" aria-hidden="true">
-        <path d="M32 6 38.3 25.7 58 32l-19.7 6.3L32 58l-6.3-19.7L6 32l19.7-6.3L32 6Z" />
-        <path d="M32 18 35.4 28.6 46 32l-10.6 3.4L32 46l-3.4-10.6L18 32l10.6-3.4L32 18Z" />
-      </svg>
-    );
-  }
-
-  return (
-    <svg className="home-model-logo home-model-logo-glm" viewBox="0 0 64 64" aria-hidden="true">
-      <path d="M32 5 55.4 18.5v27L32 59 8.6 45.5v-27L32 5Z" />
-      <path d="M20 24h24v16H20z" />
-      <path d="M32 5v13.5M32 45.5V59M8.6 18.5 20 24M44 40l11.4 5.5M55.4 18.5 44 24M20 40 8.6 45.5" />
-    </svg>
-  );
-}
-
 function BenchmarkSection() {
   return (
     <section className="home-benchmark" id="benchmark">
@@ -102,7 +74,13 @@ function BenchmarkSection() {
               <div className="home-model-index" aria-hidden="true">
                 0{index + 1}
               </div>
-              <ModelLogo type={model.logo} />
+              <Image
+                className={`home-model-logo home-model-logo-${model.name.toLowerCase()}`}
+                src={model.logo}
+                alt={`Logo ${model.name}`}
+                width={72}
+                height={72}
+              />
             </div>
             <div className="home-model-title">
               <h3>{model.name}</h3>
@@ -148,8 +126,11 @@ export default function Home() {
     <main className="home-page">
       <header className="home-header">
         <Link className="home-brand" href="/" aria-label="Página inicial">
-          <span>MM</span>
-          <strong>AI Portfolio Benchmark</strong>
+          <strong>Murilo Monferrari</strong>
+          <span className="home-brand-context">
+            <span>AI Portfolio Benchmark</span>
+            <small>3 versões · 2026</small>
+          </span>
         </Link>
 
         <nav className="home-nav" aria-label="Acessar os três portfolios">
@@ -164,7 +145,7 @@ export default function Home() {
       <section className="home-hero" aria-labelledby="home-title">
         <div className="home-hero-copy">
           <p className="home-eyebrow">GPT, Claude e GLM · mesmo briefing e mesmo prompt</p>
-          <h1 id="home-title">Portfolio Benchmark: <span>Murilo Monferrari</span></h1>
+          <h1 id="home-title">AI Portfolio Benchmark: <span>Murilo Monferrari</span></h1>
           <p className="home-hero-lead">
             Para montar meu portfolio, pedi ao GPT, ao Claude e ao GLM que
             trabalhassem a partir das mesmas informações e da mesma tarefa.
@@ -285,7 +266,11 @@ export default function Home() {
           <p>
             Aqui estão minha experiência, formação e competências em uma única
             página. Você pode visualizar o PDF sem sair do site, abrir em uma
-            nova aba ou baixar o arquivo.
+            nova aba ou baixar o arquivo. O currículo foi gerado no {" "}
+            <a href="https://github.com/gudyfut/EditorCV" target="_blank" rel="noopener noreferrer">
+              EditorCV
+            </a>
+            , um editor de currículos que desenvolvi como outro projeto.
           </p>
           <div className="home-resume-links">
             <a href="/CV%20Murilo.pdf" target="_blank" rel="noreferrer">
