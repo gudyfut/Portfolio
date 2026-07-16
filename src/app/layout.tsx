@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AI Portfolio Benchmark | Murilo Monferrari",
+  title: "Murilo Monferrari | Desenvolvedor Fullstack",
   description:
-    "Três portfolios completos de Murilo Monferrari criados por GPT, Claude e GLM a partir do mesmo briefing e do mesmo prompt.",
+    "Portfolio de Murilo Monferrari, desenvolvedor fullstack com experiência em automação Python, aplicações React e deploy na AWS.",
 };
 
 export default function RootLayout({
