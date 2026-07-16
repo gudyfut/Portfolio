@@ -1,0 +1,441 @@
+[browser] In HTML, <a> cannot be a descendant of <a>.
+This will cause a hydration error.
+
+  ...
+    <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+      <RedirectBoundary>
+        <RedirectErrorBoundary router={{...}}>
+          <InnerLayoutRouter url="/glm" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} segmentPath={[...]} ...>
+            <SegmentViewNode type="page" pagePath="glm/page.tsx">
+              <SegmentTrieNode>
+              <GlmPortfolioPage>
+                <Portfolio>
+                  <main className="relative m...">
+                    <ScrollProgress>
+                    <CustomCursor>
+                    <AmbientBackground>
+                    <Navbar>
+                    <Hero>
+                    <About>
+                    <Skills>
+                    <Experience>
+                    <Education>
+                    <Contact lang="en" t={function Portfolio.useCallback[t]}>
+                      <section id="contact" className="relative m...">
+                        <div className="glm-glass ...">
+                          <div>
+                          <div>
+                          <div className="relative g...">
+                            <div className="glm-reveal">
+                              <p>
+                              <h2>
+                              <p>
+                              <Magnetic as="a" strength={0.3} className="mt-7">
+>                               <a
+>                                 ref={{current:null}}
+>                                 className="mt-7"
+>                                 style={{transition:"transform ...",display:"inline-block"}}
+>                               >
+>                                 <a
+>                                   href="mailto:murilorfm@gmail.com"
+>                                   data-cursor="hover"
+>                                   className="group inline-flex h-12 items-center gap-2 rounded-xl bg-gradient-to-r f..."
+>                                 >
+                            ...
+                    ...
+            ...
+          ...
+ 
+[browser] In HTML, <button> cannot be a descendant of <button>.
+This will cause a hydration error.
+
+  ...
+    <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+      <RedirectBoundary>
+        <RedirectErrorBoundary router={{...}}>
+          <InnerLayoutRouter url="/glm" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} segmentPath={[...]} ...>
+            <SegmentViewNode type="page" pagePath="glm/page.tsx">
+              <SegmentTrieNode>
+              <GlmPortfolioPage>
+                <Portfolio>
+                  <main className="relative m...">
+                    <ScrollProgress>
+                    <CustomCursor>
+                    <AmbientBackground>
+                    <Navbar>
+                    <Hero lang="en" scrollTo={function Portfolio.useCallback[scrollTo]} ...>
+                      <section id="home" className="relative f...">
+                        <div>
+                        <div className="mx-auto gr...">
+                          <div className="glm-reveal">
+                            <div>
+                            <h1>
+                            <div>
+                            <p>
+                            <div className="mt-8 flex ...">
+                              <Magnetic as="button" strength={0.35}>
+>                               <button
+>                                 ref={{current:null}}
+>                                 className={undefined}
+>                                 style={{transition:"transform ...",display:"inline-block"}}
+>                               >
+>                                 <button
+>                                   onClick={function onClick}
+>                                   data-cursor="hover"
+>                                   className="group inline-flex h-12 items-center gap-2 rounded-xl bg-gradient-to-r f..."
+>                                 >
+                              ...
+                            ...
+                          ...
+                        ...
+                    ...
+            ...
+          ...
+ 
+[browser] <a> cannot contain a nested <a>.
+See this log for the ancestor stack trace. 
+[browser] <button> cannot contain a nested <button>.
+See this log for the ancestor stack trace. 
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[browser] In HTML, <button> cannot be a descendant of <button>.
+This will cause a hydration error.
+
+  ...
+    <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+      <RedirectBoundary>
+        <RedirectErrorBoundary router={{...}}>
+          <InnerLayoutRouter url="/glm" tree={[...]} params={{}} cacheNode={{rsc:{...}, ...}} segmentPath={[...]} ...>
+            <SegmentViewNode type="page" pagePath="glm/page.tsx">
+              <SegmentTrieNode>
+              <GlmPortfolioPage>
+                <Portfolio>
+                  <main className="relative m...">
+                    <ScrollProgress>
+                    <CustomCursor>
+                    <AmbientBackground>
+                    <Navbar>
+                    <Hero lang="en" scrollTo={function Portfolio.useCallback[scrollTo]} ...>
+                      <section id="home" className="relative f...">
+                        <div>
+                        <div className="mx-auto gr...">
+                          <div className="glm-reveal">
+                            <div>
+                            <h1>
+                            <div>
+                            <p>
+                            <div className="mt-8 flex ...">
+                              <Magnetic as="button" strength={0.35}>
+>                               <button
+>                                 ref={{current:null}}
+>                                 className={undefined}
+>                                 style={{transition:"transform ...",display:"inline-block"}}
+>                               >
+>                                 <button
+>                                   onClick={function onClick}
+>                                   data-cursor="hover"
+>                                   className="group inline-flex h-12 items-center gap-2 rounded-xl bg-gradient-to-r f..."
+>                                 >
+                              ...
+                            ...
+                          ...
+                        ...
+                    ...
+            ...
+          ...
+ 
+[browser] <button> cannot contain a nested <button>.
+See this log for the ancestor stack trace. 
+[browser] In HTML, <a> cannot be a descendant of <a>.
+This will cause a hydration error.
+
+  ...
+    <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+      <RedirectBoundary>
+        <RedirectErrorBoundary router={{...}}>
+          <InnerLayoutRouter url="/glm" tree={[...]} params={{}} cacheNode={{rsc:{...}, ...}} segmentPath={[...]} ...>
+            <SegmentViewNode type="page" pagePath="glm/page.tsx">
+              <SegmentTrieNode>
+              <GlmPortfolioPage>
+                <Portfolio>
+                  <main className="relative m...">
+                    <ScrollProgress>
+                    <CustomCursor>
+                    <AmbientBackground>
+                    <Navbar>
+                    <Hero>
+                    <About>
+                    <Skills>
+                    <Experience>
+                    <Education>
+                    <Contact lang="en" t={function Portfolio.useCallback[t]}>
+                      <section id="contact" className="relative m...">
+                        <div className="glm-glass ...">
+                          <div>
+                          <div>
+                          <div className="relative g...">
+                            <div className="glm-reveal">
+                              <p>
+                              <h2>
+                              <p>
+                              <Magnetic as="a" strength={0.3} className="mt-7">
+>                               <a
+>                                 ref={{current:null}}
+>                                 className="mt-7"
+>                                 style={{transition:"transform ...",display:"inline-block"}}
+>                               >
+>                                 <a
+>                                   href="mailto:murilorfm@gmail.com"
+>                                   data-cursor="hover"
+>                                   className="group inline-flex h-12 items-center gap-2 rounded-xl bg-gradient-to-r f..."
+>                                 >
+                            ...
+                    ...
+            ...
+          ...
+ 
+[browser] <a> cannot contain a nested <a>.
+See this log for the ancestor stack trace. 
+[browser] Uncaught Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+    at <unknown> (https://react.dev/link/hydration-mismatch)
+    at button (<anonymous>)
+    at Hero (src/app/glm/Portfolio.tsx:492:15)
+    at Portfolio (src/app/glm/Portfolio.tsx:207:7)
+    at GlmPortfolioPage (src\app\glm\page.tsx:28:10)
+  490 |           <div className="mt-8 flex flex-wrap items-center gap-3">
+  491 |             <Magnetic as="button" strength={0.35}>
+> 492 |               <button
+      |               ^
+  493 |                 onClick={() => scrollTo("contact")}
+  494 |                 data-cursor="hover"
+  495 |                 className="group inline-flex h-12 items-center gap-2 rounded-xl bg-gradie...
+[browser] In HTML, <button> cannot be a descendant of <button>.
+This will cause a hydration error.
+
+  ...
+    <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+      <RedirectBoundary>
+        <RedirectErrorBoundary router={{...}}>
+          <InnerLayoutRouter url="/glm" tree={[...]} params={{}} cacheNode={{rsc:{...}, ...}} segmentPath={[...]} ...>
+            <SegmentViewNode type="page" pagePath="glm/page.tsx">
+              <SegmentTrieNode>
+              <GlmPortfolioPage>
+                <Portfolio>
+                  <main className="relative m...">
+                    <ScrollProgress>
+                    <CustomCursor>
+                    <AmbientBackground>
+                    <Navbar>
+                    <Hero lang="en" scrollTo={function Portfolio.useCallback[scrollTo]} ...>
+                      <section id="home" className="relative f...">
+                        <div>
+                        <div className="mx-auto gr...">
+                          <div className="glm-reveal">
+                            <div>
+                            <h1>
+                            <div>
+                            <p>
+                            <div className="mt-8 flex ...">
+                              <Magnetic as="button" strength={0.35}>
+>                               <button
+>                                 ref={{current:null}}
+>                                 className={undefined}
+>                                 style={{transition:"transform ...",display:"inline-block"}}
+>                               >
+>                                 <button
+>                                   onClick={function onClick}
+>                                   data-cursor="hover"
+>                                   className="group inline-flex h-12 items-center gap-2 rounded-xl bg-gradient-to-r f..."
+>                                 >
+                              ...
+                            ...
+                          ...
+                        ...
+                    ...
+            ...
+          ...
+ 
+[browser] <button> cannot contain a nested <button>.
+See this log for the ancestor stack trace. 
+[browser] In HTML, <a> cannot be a descendant of <a>.
+This will cause a hydration error.
+
+  ...
+    <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+      <RedirectBoundary>
+        <RedirectErrorBoundary router={{...}}>
+          <InnerLayoutRouter url="/glm" tree={[...]} params={{}} cacheNode={{rsc:{...}, ...}} segmentPath={[...]} ...>
+            <SegmentViewNode type="page" pagePath="glm/page.tsx">
+              <SegmentTrieNode>
+              <GlmPortfolioPage>
+                <Portfolio>
+                  <main className="relative m...">
+                    <ScrollProgress>
+                    <CustomCursor>
+                    <AmbientBackground>
+                    <Navbar>
+                    <Hero>
+                    <About>
+                    <Skills>
+                    <Experience>
+                    <Education>
+                    <Contact lang="en" t={function Portfolio.useCallback[t]}>
+                      <section id="contact" className="relative m...">
+                        <div className="glm-glass ...">
+                          <div>
+                          <div>
+                          <div className="relative g...">
+                            <div className="glm-reveal">
+                              <p>
+                              <h2>
+                              <p>
+                              <Magnetic as="a" strength={0.3} className="mt-7">
+>                               <a
+>                                 ref={{current:null}}
+>                                 className="mt-7"
+>                                 style={{transition:"transform ...",display:"inline-block"}}
+>                               >
+>                                 <a
+>                                   href="mailto:murilorfm@gmail.com"
+>                                   data-cursor="hover"
+>                                   className="group inline-flex h-12 items-center gap-2 rounded-xl bg-gradient-to-r f..."
+>                                 >
+                            ...
+                    ...
+            ...
+          ...
+ 
+[browser] <a> cannot contain a nested <a>.
+See this log for the ancestor stack trace. 
+[browser] Uncaught Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+    at <unknown> (https://react.dev/link/hydration-mismatch)
+    at button (<anonymous>)
+    at Hero (src/app/glm/Portfolio.tsx:492:15)
+    at Portfolio (src/app/glm/Portfolio.tsx:207:7)
+    at GlmPortfolioPage (src\app\glm\page.tsx:28:10)
+  490 |           <div className="mt-8 flex flex-wrap items-center gap-3">
+  491 |             <Magnetic as="button" strength={0.35}>
+> 492 |               <button
+      |               ^
+  493 |                 onClick={() => scrollTo("contact")}
+  494 |                 data-cursor="hover"
+  495 |                 className="group inline-flex h-12 items-center gap-2 rounded-xl bg-gradie...
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[browser] In HTML, <button> cannot be a descendant of <button>.
+This will cause a hydration error.
+
+  ...
+    <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+      <RedirectBoundary>
+        <RedirectErrorBoundary router={{...}}>
+          <InnerLayoutRouter url="/glm" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} segmentPath={[...]} ...>
+            <SegmentViewNode type="page" pagePath="glm/page.tsx">
+              <SegmentTrieNode>
+              <GlmPortfolioPage>
+                <Portfolio>
+                  <main className="relative m...">
+                    <ScrollProgress>
+                    <CustomCursor>
+                    <AmbientBackground>
+                    <Navbar>
+                    <Hero lang="en" scrollTo={function Portfolio.useCallback[scrollTo]} ...>
+                      <section id="home" className="relative f...">
+                        <div>
+                        <div className="mx-auto gr...">
+                          <div className="glm-reveal">
+                            <div>
+                            <h1>
+                            <div>
+                            <p>
+                            <div className="mt-8 flex ...">
+                              <Magnetic as="button" strength={0.35}>
+>                               <button
+>                                 ref={{current:null}}
+>                                 className={undefined}
+>                                 style={{transition:"transform ...",display:"inline-block"}}
+>                               >
+>                                 <button
+>                                   onClick={function onClick}
+>                                   data-cursor="hover"
+>                                   className="group inline-flex h-12 items-center gap-2 rounded-xl bg-gradient-to-r f..."
+>                                 >
+                              ...
+                            ...
+                          ...
+                        ...
+                    ...
+            ...
+          ...
+ 
+[browser] <button> cannot contain a nested <button>.
+See this log for the ancestor stack trace. 
+[browser] In HTML, <a> cannot be a descendant of <a>.
+This will cause a hydration error.
+
+  ...
+    <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+      <RedirectBoundary>
+        <RedirectErrorBoundary router={{...}}>
+          <InnerLayoutRouter url="/glm" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} segmentPath={[...]} ...>
+            <SegmentViewNode type="page" pagePath="glm/page.tsx">
+              <SegmentTrieNode>
+              <GlmPortfolioPage>
+                <Portfolio>
+                  <main className="relative m...">
+                    <ScrollProgress>
+                    <CustomCursor>
+                    <AmbientBackground>
+                    <Navbar>
+                    <Hero>
+                    <About>
+                    <Skills>
+                    <Experience>
+                    <Education>
+                    <Contact lang="en" t={function Portfolio.useCallback[t]}>
+                      <section id="contact" className="relative m...">
+                        <div className="glm-glass ...">
+                          <div>
+                          <div>
+                          <div className="relative g...">
+                            <div className="glm-reveal">
+                              <p>
+                              <h2>
+                              <p>
+                              <Magnetic as="a" strength={0.3} className="mt-7">
+>                               <a
+>                                 ref={{current:null}}
+>                                 className="mt-7"
+>                                 style={{transition:"transform ...",display:"inline-block"}}
+>                               >
+>                                 <a
+>                                   href="mailto:murilorfm@gmail.com"
+>                                   data-cursor="hover"
+>                                   className="group inline-flex h-12 items-center gap-2 rounded-xl bg-gradient-to-r f..."
+>                                 >
+                            ...
+                    ...
+            ...
+          ...
+ 
+[browser] <a> cannot contain a nested <a>.
+See this log for the ancestor stack trace. 
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior

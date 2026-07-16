@@ -1,0 +1,246 @@
+/* GLM portfolio — custom animations & utilities (scoped to /glm route) */
+
+@keyframes glm-fade-up {
+  from { opacity: 0; transform: translateY(26px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes glm-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes glm-fade-scale {
+  from { opacity: 0; transform: scale(0.94); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes glm-blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+@keyframes glm-caret {
+  0%, 100% { transform: translateY(0); opacity: 0.35; }
+  50% { transform: translateY(6px); opacity: 1; }
+}
+@keyframes glm-float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(1.5deg); }
+}
+@keyframes glm-float-slow {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(-18px) translateX(8px); }
+}
+@keyframes glm-spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes glm-spin-rev {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
+@keyframes glm-aurora {
+  0% { transform: translate3d(-10%, -10%, 0) rotate(0deg) scale(1); }
+  33% { transform: translate3d(10%, 5%, 0) rotate(40deg) scale(1.15); }
+  66% { transform: translate3d(-5%, 10%, 0) rotate(-30deg) scale(0.95); }
+  100% { transform: translate3d(-10%, -10%, 0) rotate(0deg) scale(1); }
+}
+@keyframes glm-shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+@keyframes glm-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@keyframes glm-grid-pan {
+  from { background-position: 0 0; }
+  to { background-position: 60px 60px; }
+}
+@keyframes glm-ping-ring {
+  0% { transform: scale(0.8); opacity: 0.8; }
+  100% { transform: scale(2.4); opacity: 0; }
+}
+@keyframes glm-pop {
+  0% { transform: scale(0.6); opacity: 0; }
+  60% { transform: scale(1.08); opacity: 1; }
+  100% { transform: scale(1); }
+}
+@keyframes glm-pulse-dot {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.6); }
+  50% { box-shadow: 0 0 0 6px rgba(52, 211, 153, 0); }
+}
+@keyframes glm-rise {
+  from { transform: translateY(100%); }
+  to { transform: translateY(-100%); }
+}
+
+/* Reveal-on-scroll */
+.glm-reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+.glm-reveal.glm-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Gradient text */
+.glm-gradient-text {
+  background: linear-gradient(110deg, #5eead4 0%, #22d3ee 38%, #a78bfa 78%, #f0abfc 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Animated underline link */
+.glm-underline-link {
+  position: relative;
+}
+.glm-underline-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 1.5px;
+  width: 100%;
+  background: linear-gradient(90deg, #5eead4, #a78bfa);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.glm-underline-link:hover::after,
+.glm-underline-link[data-active="true"]::after {
+  transform: scaleX(1);
+}
+
+/* Glass card */
+.glm-glass {
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+/* Custom cursor */
+.glm-cursor-dot,
+.glm-cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  border-radius: 9999px;
+  mix-blend-mode: difference;
+}
+.glm-cursor-dot {
+  width: 7px;
+  height: 7px;
+  background: #ffffff;
+  transform: translate(-50%, -50%);
+}
+.glm-cursor-ring {
+  width: 38px;
+  height: 38px;
+  border: 1.5px solid rgba(255, 255, 255, 0.7);
+  transform: translate(-50%, -50%);
+  transition: width 0.25s ease, height 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+}
+.glm-cursor-ring.glm-hover {
+  width: 64px;
+  height: 64px;
+  background: rgba(94, 234, 212, 0.12);
+  border-color: rgba(94, 234, 212, 0.6);
+}
+@media (hover: none), (pointer: coarse) {
+  .glm-cursor-dot,
+  .glm-cursor-ring {
+    display: none;
+  }
+}
+
+/* Grid background */
+.glm-grid-bg {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 60px 60px;
+  animation: glm-grid-pan 18s linear infinite;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 30%, #000 30%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 30%, #000 30%, transparent 80%);
+}
+
+/* Shimmer text */
+.glm-shimmer {
+  background: linear-gradient(90deg, #6b7280 0%, #ffffff 50%, #6b7280 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glm-shimmer 3.5s linear infinite;
+}
+
+/* Tag chip */
+.glm-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+  padding: 0.35rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #d4d4d8;
+  transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease, color 0.25s ease;
+}
+.glm-chip:hover {
+  transform: translateY(-2px);
+  border-color: rgba(94, 234, 212, 0.6);
+  background: rgba(94, 234, 212, 0.08);
+  color: #ecfeff;
+}
+
+/* Magnetic/tilt */
+.glm-tilt {
+  transition: transform 0.18s ease;
+  transform-style: preserve-3d;
+}
+
+/* Marquee */
+.glm-marquee {
+  display: flex;
+  width: max-content;
+  animation: glm-marquee 32s linear infinite;
+}
+.glm-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Scrollbar */
+.glm-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+.glm-scroll::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .glm-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .glm-marquee,
+  .glm-grid-bg,
+  .glm-float,
+  .glm-spin-slow,
+  .glm-spin-rev,
+  .glm-aurora-el {
+    animation: none !important;
+  }
+}
