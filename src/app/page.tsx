@@ -356,11 +356,6 @@ export default function Home() {
             <p className="home-kicker">Projetos selecionados</p>
             <h2 id="projects-title">Meus trabalhos e projetos</h2>
           </div>
-          <p>
-            Selecionei três projetos que mostram como penso produto, dados e
-            engenharia. Dois têm código público; o sistema da SIMCafé é um case
-            profissional em produção.
-          </p>
         </div>
 
         <div className="home-project-list">
