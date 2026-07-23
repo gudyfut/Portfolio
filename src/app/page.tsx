@@ -54,7 +54,7 @@ function Benchmark() {
       <div className="home-benchmark-heading">
         <div>
           <p className="home-kicker">Experimento dentro do portfolio</p>
-          <h3>Quando meu currículo virou briefing para três IAs.</h3>
+          <h3>Meu currículo virou briefing para três IAs.</h3>
         </div>
         <div className="home-benchmark-copy">
           <p>
@@ -354,7 +354,7 @@ export default function Home() {
         <div className="home-section-heading home-projects-heading">
           <div>
             <p className="home-kicker">Projetos selecionados</p>
-            <h2 id="projects-title">Trabalhos que completam a história.</h2>
+            <h2 id="projects-title">Meus trabalhos e projetos</h2>
           </div>
           <p>
             Selecionei três projetos que mostram como penso produto, dados e
